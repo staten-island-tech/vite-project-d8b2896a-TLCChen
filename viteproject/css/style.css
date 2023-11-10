@@ -1,0 +1,22 @@
+html, body, *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+.box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.item{
+  background-color: rgb(127, 255, 212);
+}
+
+img{
+  width: 80%;
+  height: 20rem;
+}
