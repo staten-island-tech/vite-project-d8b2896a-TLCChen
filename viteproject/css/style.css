@@ -16,6 +16,9 @@ html, body, *{
   background-color: rgb(127, 255, 212);
   border-radius: 1rem;
   box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
+  width: 27%;
+  height: auto;
+  margin: 2rem;
 }
 
 .text{
@@ -25,5 +28,6 @@ html, body, *{
 
 img{
   width: 80%;
-  height: 20rem;
+  height: 55%;
+  background-color: rgb(255, 255, 255);
 }
