@@ -1,17 +1,18 @@
 import "../css/style.css";
-import { opps, name } from "./pokemon";
-console.log(opps[0] + " is cool.");
+import { pokemons } from "./pokemon";
 
-document.querySelector(".box").insertAdjacentHTML(
-  "beforeend",
-  `<div class="item">
-    <h2 class = "text">Cat</h2>
-    <img src="./cat1.jpg" alt="cat1">
-  </div>
-  <div class="item">
-    <h2 class = "text">Cat1</h2>
-    <img src="./cat1.jpg" alt="cat1">
-  </div>`
-);
+function cardCreator(name, type, img) {
+  document.querySelector(".box").insertAdjacentHTML(
+    //make this a DOMSselector object later.
+    "beforeend",
+    `<div class="item">
+      <h2 class = "text">${name}</h2>
+      <img src=${img} alt="cat1">
+      <h2 class = "text">Type: ${type}</h2>
+    </div>`
+  );
+}
+
+pokemons.forEach((take) => cardCreator(take.name, take.type, take.imgURL));
 
 // Make cards that look like this: https://assets.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_15.png
