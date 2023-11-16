@@ -16,9 +16,10 @@ html, body, *{
   background-color: rgb(127, 255, 212);
   border-radius: 1rem;
   box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
-  width: 27%;
+  width: 20%;
   height: auto;
   margin: 2rem;
+  transition: all 500ms;
 }
 
 .text{
@@ -26,6 +27,14 @@ html, body, *{
   color: rgb(0, 0, 0);
 }
 
+.batman{
+  
+  margin: 0 auto;
+}
+
+.item:hover{
+  transform:translateY(-5rem);
+}
 img{
   width: 80%;
   height: 55%;

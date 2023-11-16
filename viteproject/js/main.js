@@ -13,6 +13,20 @@ function cardCreator(name, type, img) {
   );
 }
 
-pokemons.forEach((take) => cardCreator(take.name, take.type, take.imgURL));
+function callCard() {
+  pokemons.forEach((take) => cardCreator(take.name, take.type, take.imgURL));
+}
+
+function typeFilter(filtering) {
+  const filteringType = pokemons.filter((pokemonType) =>
+    pokemonType.type.includes(filtering)
+  );
+  filteringType.forEach((take) =>
+    cardCreator(take.name, take.type, take.imgURL)
+  );
+}
+
+typeFilter("fairy");
+callCard();
 
 // Make cards that look like this: https://assets.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_15.png
