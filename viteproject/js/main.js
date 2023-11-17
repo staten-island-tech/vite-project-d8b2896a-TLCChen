@@ -1,5 +1,6 @@
 import "../css/style.css";
 import { pokemons } from "./pokemon";
+import { DOMSselectors } from "./doms";
 
 function cardCreator(name, type, img) {
   document.querySelector(".box").insertAdjacentHTML(
@@ -7,8 +8,10 @@ function cardCreator(name, type, img) {
     "beforeend",
     `<div class="item">
       <h2 class = "text">${name}</h2>
-      <img src=${img} alt="cat1">
-      <h2 class = "text">Type: ${type}</h2>
+      <img src=${img} alt="${name}">
+      <h2 class = "text">Type: ${type
+        .map((name) => name.charAt(0).toUpperCase() + name.slice(1))
+        .join(", ")}</h2>
     </div>`
   );
 }
@@ -26,7 +29,17 @@ function typeFilter(filtering) {
   );
 }
 
-typeFilter("fairy");
-callCard();
+DOMSselectors.button.forEach((button) => {
+  console.log(button, button.id);
+  button.addEventListener("click", function () {
+    document.querySelector(".box").replaceChildren();
+    typeFilter(button.id);
+  });
+});
+
+DOMSselectors.button2.addEventListener("click", function () {
+  document.querySelector(".box").replaceChildren();
+  callCard();
+});
 
 // Make cards that look like this: https://assets.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_15.png

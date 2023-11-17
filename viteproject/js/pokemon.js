@@ -35,6 +35,12 @@ const pokemons = [
     type: ["dragon", "ground"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/718.png",
   },
+
+  {
+    name: "Meow Meow",
+    type: ["dark", "fighting"],
+    imgURL: "meowth.jpg",
+  },
 ];
 
 export { pokemons };
