@@ -22,6 +22,12 @@ html, body, *{
   margin: 2rem;
 }
 
+.batmen{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .text{
   font-size: 2rem;
   color: rgb(0, 0, 0);
