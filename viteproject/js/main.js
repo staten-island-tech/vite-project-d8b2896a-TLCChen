@@ -2,15 +2,15 @@ import "../css/style.css";
 import { pokemons } from "./pokemon";
 import { DOMSselector } from "./doms";
 
-function cardCreator(name, type, img) {
+function cardCreator(name, type, img, description) {
   document.querySelector(".box").insertAdjacentHTML(
     //make this a DOMSselector object later.
     "beforeend",
     `<div class="item">
       <h2 class = "text">${name}</h2>
       <img src=${img} alt="cat1">
-      <p class = "text2">Type: ${type.map((upper) => upper.charAt(0).toUpperCase() + upper.slice(1)).join(", ")}</p>
-      <p class ="description">Lorem ipsum dolor sit amet, in quidam blandit eos, iriure philosophia vituperatoribus eam ut, in facilisi cotidieque quo. Pro ea ornatus dolores. Dignissim prodesset omittantur no ius. Id vix fierent torquatos accommodare, nec elitr oporteat cu. Iusto congue omnium pro no, sea no case paulo. Ne vim dicit nullam deleniti.</p>
+      <p class = "text2">Type: ${type.map((upper) => upper.charAt(0).toUpperCase() + upper.slice(1)).join(" | ")}</p>
+      <p class ="description">${description}</p>
     </div>`
   );
 }
@@ -20,7 +20,8 @@ function callCard() {
     cardCreator(
       take.name,
       take.type,
-      take.imgURL
+      take.imgURL,
+      take.description
     )
   );
 }
@@ -29,7 +30,7 @@ function filterType(power) {
   const typeFilter = pokemons.filter((pokemonTypes) =>
     pokemonTypes.type.includes(power)
   );
-  typeFilter.forEach((call) => cardCreator(call.name, call.type, call.imgURL));
+  typeFilter.forEach((call) => cardCreator(call.name, call.type, call.imgURL, call.description));
 }
 
 DOMSselector.button.forEach((press) =>
