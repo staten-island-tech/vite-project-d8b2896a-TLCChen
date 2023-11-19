@@ -1,38 +1,38 @@
 const pokemons = [
   {
     name: "Pickachu",
-    type: ["electric"],
+    type: ["Electric"],
     imgURL:
       "https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png",
   },
   {
     name: "Talonflame",
-    type: ["fire", "flying"],
+    type: ["Fire", "Flying"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/663.png",
   },
   {
     name: "Meowth",
-    type: ["normal"],
+    type: ["Normal"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png",
   },
   {
     name: "Braixen",
-    type: ["fire"],
+    type: ["Fire"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/654.png",
   },
   {
     name: "Xerneas",
-    type: ["fairy"],
+    type: ["Fairy"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/716.png",
   },
   {
     name: "Yveltal",
-    type: ["dark", "flying"],
+    type: ["Dark", "Flying"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/717.png",
   },
   {
     name: "Zygarde",
-    type: ["dragon", "ground"],
+    type: ["Dragon", "Ground"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/718.png",
   },
 ];

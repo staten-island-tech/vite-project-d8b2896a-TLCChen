@@ -8,7 +8,9 @@ function cardCreator(name, type, img) {
     `<div class="item">
       <h2 class = "text">${name}</h2>
       <img src=${img} alt="cat1">
-      <h2 class = "text">Type: ${type}</h2>
+      <p class = "text2">Type: ${type}</p>
+      <p class ="description">Lorem ipsum dolor sit amet, in quidam blandit eos, iriure philosophia vituperatoribus eam ut, in facilisi cotidieque quo. Pro ea ornatus dolores. Dignissim prodesset omittantur no ius. Id vix fierent torquatos accommodare, nec elitr oporteat cu. Iusto congue omnium pro no, sea no case paulo. Ne vim dicit nullam deleniti.</p>
+
     </div>`
   );
 }
