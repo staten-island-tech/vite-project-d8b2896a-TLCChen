@@ -34,7 +34,14 @@ function filterType(power) {
 
 DOMSselector.button.forEach((press) =>
   press.addEventListener("click", function () {
-    filterType("fairy");
+    DOMSselector.box.replaceChildren()
+    filterType(press.id);
   })
 );
+
+DOMSselector.allcards.addEventListener("click", function(){
+  DOMSselector.box.replaceChildren()
+  callCard()
+})
+
 // Make cards that look like this: https://assets.pokemon.com/assets/cms2/img/cards/web/XY6/XY6_EN_15.png

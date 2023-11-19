@@ -1,5 +1,8 @@
 const DOMSselector = {
-    button: document.querySelectorAll(".batmen")
+    box: document.querySelector(".box"),
+    item: document.querySelector(".item"),
+    button: document.querySelectorAll(".batman"),
+    allcards: document.querySelector(".robin")
 }
 
 export{DOMSselector}
