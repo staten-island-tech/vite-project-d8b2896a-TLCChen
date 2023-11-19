@@ -32,13 +32,13 @@ function typeFilter(filtering) {
 DOMSselectors.button.forEach((button) => {
   console.log(button, button.id);
   button.addEventListener("click", function () {
-    document.querySelector(".box").replaceChildren();
+    document.querySelector(".box").replaceChildren(); // Used to different remove methods so I remember the two methods later.
     typeFilter(button.id);
   });
 });
 
 DOMSselectors.button2.addEventListener("click", function () {
-  document.querySelector(".box").replaceChildren();
+  document.querySelector(".box").removeChild(document.querySelector(".item"));
   callCard();
 });
 
