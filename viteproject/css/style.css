@@ -1,3 +1,5 @@
+@import url(variables.css);
+
 html, body, *{
   margin: 0;
   padding: 0;
@@ -5,57 +7,45 @@ html, body, *{
   font-size: 10px;
 }
 
-.box{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+:root{
+  --light-blue: #2998ff;
+  --black: #000;
+  --white: #ffffff;
+  --dark-blue: #135cc5;
+  --light-red: #f87171;
+  --dark-red: #dc2626;
+  --gray: #252c30;
+  --card-red: #ea412e;
+  --border-yellow: #ffe066;
+  --magenta: #dea4b2;
+
+/* Intentions */
+--primary: var(--light-blue);
+--secondary: var(--dark-blue);
+
+/* Typography */
+  --h1: 11.391rem;
+  --h2: 7.594rem;
+  --h3: 5.063rem;
+  --h4: 3.375rem;
+  --h5: 2.25rem;
+  --h6: 1.5rem
+}
+
+
+h1{
+  font-size: var(--h1);
   text-align: center;
 }
-
-.item{
-  background-color: rgb(234, 65, 46);
-  border: solid 1rem rgb(255, 224, 102);
-  border-radius: 1rem;
-  box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
-  width: 20%;
-  height: auto;
-  margin: 2rem;
-  transition: all 500ms;
+h2{
+  font-size: var(--h2);
 }
-
-.item:hover{
-  transform: translateY(-2rem);
+h3{
+  font-size: var(--h3);
 }
-
-.batmen{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+h4{
+  font-size: var(--h4);
 }
-
-.text{
-  font-size: 2rem;
-  color: rgb(0, 0, 0);
-  background-color: rgb(240, 209, 193);
-  border-radius: .5rem;
-  width: 90%;
-  margin: auto;
-}
-
-.text2{
-  background-color: rgb(236, 236, 238);
-  font-size: 1.5rem;
-  width: 90%;
-  margin: auto;
-}
-
-.description{
-  margin: 1rem;
-  font-size: 1.5rem;
-}
-
-img{
-  width: 90%;
-  height: 55%;
-  background-color: rgb(255, 255, 255);
+h5{
+  font-size: var(--h5);
 }

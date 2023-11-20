@@ -2,12 +2,30 @@ import "../css/style.css";
 import { pokemons } from "./pokemon";
 import { DOMSselector } from "./doms";
 
+function change(){
+  
+  document.querySelector(".btn").addEventListener("click", function(){
+    if(document.body.classList.contains("cool")){
+      document.body.classList.remove("cool")
+      document.body.classList.add("warm")
+      document.querySelector(".btn").innerHTML = "Cool";
+    
+  }
+  else{
+    document.body.classList.remove("warm")
+    document.body.classList.add("cool")
+    document.querySelector(".btn").innerHTML = "Warm";
+
+  }
+  })
+}
+
 function cardCreator(name, type, img, description) {
-  document.querySelector(".box").insertAdjacentHTML(
+  DOMSselector.box.insertAdjacentHTML(
     //make this a DOMSselector object later.
     "beforeend",
     `<div class="item">
-      <h2 class = "text">${name}</h2>
+      <h5 class = "text">${name}</h5>
       <img src=${img} alt="cat1">
       <p class = "text2">Type: ${type.map((upper) => upper.charAt(0).toUpperCase() + upper.slice(1)).join(" | ")}</p>
       <p class ="description">${description}</p>
@@ -32,6 +50,8 @@ function filterType(power) {
   );
   typeFilter.forEach((call) => cardCreator(call.name, call.type, call.imgURL, call.description));
 }
+callCard()
+change()
 
 DOMSselector.button.forEach((press) =>
   press.addEventListener("click", function () {
