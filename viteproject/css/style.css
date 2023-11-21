@@ -1,3 +1,5 @@
+@import url(variables.css);
+
 html, body, *{
   margin: 0;
   padding: 0;
@@ -5,7 +7,48 @@ html, body, *{
   font-size: 10px;
 }
 
+
+
+
+h1{
+  font-size: var(--h1);
+  text-align: center;
+}
+h2{
+  font-size: var(--h2);
+}
+h3{
+  font-size: var(--h3);
+}
+h4{
+  font-size: var(--h4);
+}
+h5{
+  font-size: var(--h5);
+}
+.warm{
+  --primary: var(--dark-red);
+  --secondary: var(--light-red);
+  --change: var(--changing);
+
+}
+
+.cool{
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
+  --change: var(--changing-cool);
+}
+
+body{
+  background-color: var(--secondary);
+}
+.name{
+  background-color: var(--primary);
+  animation: header infinite 2s;
+  animation-direction: alternate;
+}
 .box{
+  background-color: var(--secondary);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -13,17 +56,58 @@ html, body, *{
 }
 
 .item{
-  background-color: rgb(234, 65, 46);
-  border: solid 1rem rgb(255, 224, 102);
-  border-radius: 1rem;
+  background: var(--change);
+  border: solid 1rem var(--border-yellow);
+  border-radius: 1rem ;
   box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
   width: 20%;
   height: auto;
   margin: 2rem;
+  transition: all 500ms;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.item:hover{
+  transform: translateY(-2rem);
+}
+
+.batmen{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 1rem auto;
+  width: 80vw;
+  background-color: var(--secondary);
+}
+
+.batman, .robin, .btn{
+    border-radius: 1.2rem;
+    border: .3rem outset #888;
+    position: relative;
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    color: #eee;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+    font-family: verdana;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-decoration: none;
+    background: linear-gradient(160deg, #666, #444);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    transition: 0.2s;
+    margin: 1rem auto;
+}
+/* This is where I stole the button CSS from https://webdeasy.de/en/top-css-buttons-en/ Please forgive me. */
+
+.batman:hover, .robin:hover{
+  transform: translateY(-.9rem);
 }
 
 .text{
-  font-size: 2rem;
+  font-size: var(--h5);
   color: rgb(0, 0, 0);
   background-color: rgb(240, 209, 193);
   border-radius: .5rem;
@@ -32,19 +116,47 @@ html, body, *{
 }
 
 .text2{
-  background-color: rgb(236, 236, 238);
-  font-size: 1.5rem;
+  color: rgb(236, 236, 238);
+  border-radius: 0.5rem;
+  background-image: url(https://i.guim.co.uk/img/media/8d904ba5091c05f48cd173406dfa974244e27732/93_193_4090_2454/master/4090.jpg?width=700&quality=85&auto=format&fit=max&s=c6ae88f8a374b81a169a980292bab24e);
+  font-size: var(--h6);
   width: 90%;
   margin: auto;
 }
 
 .description{
   margin: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 img{
   width: 90%;
   height: 55%;
   background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 100rem) {
+  .item{
+    width: 20%;
+  }
+}
+
+@media screen and (max-width: 75rem) {
+  .item{
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 45rem) {
+  .item{
+    width: 70%;
+  }}
+
+  @keyframes header {
+    0%{
+      color: rgb(142, 1, 145);
+    }
+    100%{
+      color: rgb(87, 1, 90);
+    }
 }
