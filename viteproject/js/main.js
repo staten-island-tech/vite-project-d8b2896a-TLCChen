@@ -27,7 +27,8 @@ function cardCreator(name, type, img, description) {
         .map((upper) => upper.charAt(0).toUpperCase() + upper.slice(1))
         .join(" | ")}</p>
       <p class ="description">${description}</p>
-    </div>`
+    </div>
+    `
   );
 }
 

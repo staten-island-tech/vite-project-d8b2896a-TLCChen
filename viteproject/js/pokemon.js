@@ -13,6 +13,18 @@ const pokemons = [
     description: "Talonflame is a bird that can become a fireball."
   },
   {
+    name: "Hawlucha",
+    type: ["flying", "fighting"],
+    imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/701.png",
+    description: "Hawlucha is a hawk who can defeat the Rock in a wrestling match."
+  },
+  {
+    name: "Noivern",
+    type: ["dragon", "flying"],
+    imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/715.png",
+    description: " Noivern is a bat that untilize sound magic."
+  },
+  {
     name: "Meowth",
     type: ["normal"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png",
@@ -23,6 +35,18 @@ const pokemons = [
     type: ["fire"],
     imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/654.png",
     description: "Braixen is a fox that can utilize fire magic."
+  },
+  {
+    name: "Froakie",
+    type: ["water"],
+    imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/656.png",
+    description: "Froakie is a frog that can fire condensed water bubbles."
+  },
+  {
+    name: "Greninja",
+    type: ["water", "dark"],
+    imgURL: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/658.png",
+    description: "Greninja is a Satoshi-san cosplaying a frog ninja."
   },
   {
     name: "Xerneas",

@@ -28,12 +28,15 @@ h5{
 }
 .warm{
   --primary: var(--dark-red);
-  --secondary: var(--light-red)
+  --secondary: var(--light-red);
+  --change: var(--changing);
+
 }
 
 .cool{
   --primary: var(--light-blue);
-  --secondary: var(--dark-blue)
+  --secondary: var(--dark-blue);
+  --change: var(--changing-cool);
 }
 
 body{
@@ -53,7 +56,7 @@ body{
 }
 
 .item{
-  background-color: var(--card-red);
+  background: var(--change);
   border: solid 1rem var(--border-yellow);
   border-radius: 1rem ;
   box-shadow: 1rem 1rem 1rem rgb(0, 0, 0);
@@ -97,22 +100,7 @@ body{
     transition: 0.2s;
     margin: 1rem auto;
 }
-/* This is where I stole the CSS from https://webdeasy.de/en/top-css-buttons-en/ Please forgive me. */
-
-/* .btn {
-  padding: 16px 42px;
-  border-radius: 3px;
-  box-shadow: 0px 0px 12px -2px rgba(0, 0, 0, 0.5);
-  line-height: 1.25;
-  background: #FC6E51;
-  text-decoration: none;
-  color: white;
-  font-size: 16px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  position: relative;
-  transition: background-color 0.6s ease;
-  overflow: hidden;} */
+/* This is where I stole the button CSS from https://webdeasy.de/en/top-css-buttons-en/ Please forgive me. */
 
 .batman:hover, .robin:hover{
   transform: translateY(-.9rem);
