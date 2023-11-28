@@ -37,9 +37,11 @@ function cardCreator(name, type, img, description) {
 // This function uses the function cardCreator to create flex cards using the objects from the array pokemons.
 // It does this by looping through each object in the array "pokemons" and taking the values in its variables to create flex cards using cardCreator function.
 function callCard() {
-  pokemons.forEach((take) =>
-    cardCreator(take.name, take.type, take.imgURL, take.description)
-  );
+  pokemons
+    .filter((pokemon) => pokemon.name !== "Mr.Whalen")
+    .forEach((take) =>
+      cardCreator(take.name, take.type, take.imgURL, take.description)
+    );
 }
 // This function filters the pokemons array by type by taking in an arguement called power to create a new filtered array
 // called typeFilter. Then it creates flex cards using the function cardCreator using objects from the array typeFilter.
