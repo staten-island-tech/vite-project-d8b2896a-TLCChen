@@ -4,7 +4,7 @@ import { DOMSselector } from "./doms.js";
 import "../css/style.css";
 
 // function that changes the color theme of the website when the event "click" is detected on the button "btn".
-// The text on the button changes each time the button is pressed using innerHTML. 
+// The text on the button changes each time the button is pressed using innerHTML.
 function change() {
   document.querySelector(".btn").addEventListener("click", function () {
     if (document.body.classList.contains("cool")) {
@@ -42,7 +42,7 @@ function callCard() {
   );
 }
 // This function filters the pokemons array by type by taking in an arguement called power to create a new filtered array
-// called typeFilter. Then it creates flex cards using the function cardCreator using objects from the array typeFilter. 
+// called typeFilter. Then it creates flex cards using the function cardCreator using objects from the array typeFilter.
 function filterType(power) {
   const typeFilter = pokemons.filter((pokemonTypes) =>
     pokemonTypes.type.includes(power)
@@ -56,7 +56,7 @@ callCard();
 change();
 // takes the many variables named "button" from the object DOMSselector. It then listens for "clicks" that are directed the "button"s.
 // Once the "click" is detected all cards on the screen are replaced with ""(an empty string).
-// Then the function filterType is used to filter the cards based on the id of the button pressed. The id of the buttons correspond to the type being filtered. 
+// Then the function filterType is used to filter the cards based on the id of the button pressed. The id of the buttons correspond to the type being filtered.
 DOMSselector.button.forEach((press) =>
   press.addEventListener("click", function () {
     DOMSselector.box.replaceChildren();
@@ -65,7 +65,7 @@ DOMSselector.button.forEach((press) =>
 );
 // Takes the variable "allcards" which is a button from the object DOMSselector. Then it detects for "clicks" directed at the "allcards" button.
 // After the "click" is detected all children of box is replaced with ""(all cards are deleted).
-// The function allCard is then called. 
+// The function allCard is then called.
 DOMSselector.allcards.addEventListener("click", function () {
   DOMSselector.box.replaceChildren();
   callCard();
