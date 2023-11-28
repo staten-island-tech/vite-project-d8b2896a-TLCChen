@@ -101,6 +101,9 @@ body{
     margin: 1rem auto;
 }
 /* This is where I stole the button CSS from https://webdeasy.de/en/top-css-buttons-en/ Please forgive me. */
+#ghost{
+  opacity: 0;
+}
 
 .batman:hover, .robin:hover{
   transform: translateY(-.9rem);
